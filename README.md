@@ -4,8 +4,10 @@ An introductory STM Microcontrollers experiment
 ## Created by 
 [Dayna Anderson](dayna.anderson@csu.fullerton.edu)
 
+## Note:
+An alternate implementation of this solution using interrupts can be found [here.](https://github.com/Dayna-A/square_wave_frequency/tree/interrupts)
 
-## Solution Pseudocode
+## Input Pin Solution Pseudocode
 
 ```
   Connect to input pin
