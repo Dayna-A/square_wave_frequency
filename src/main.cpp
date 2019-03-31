@@ -12,14 +12,27 @@ int main() {
   }
   // ensure LED starts in the off state
   inputIndicatorLED.write(0);
-  
+  Timer t;
   // Avoid floating pin input by setting default to digital low
   inputPin.mode(PullDown);
-
+  bool currentState;
+  // recentState is used to detect a change in input state
+  bool recentState=0;
   while (1) {
-    pc.printf("ConnectedPin has value: %d \n", inputPin.read());
+    currentState=inputPin.read();
+    if (currentState!=recentState){
+      // start the timer on rising edge or
+      // stop and reset timer on falling edge
+      if(currentState) {
+        t.start();
+      }else{
+        t.stop();
+        pc.printf("Pin was on for %.4f seconds\n",t.read());
+        t.reset();
+      }
+      recentState=currentState;
+    }
     // turn on/off led to match pin signal
     inputIndicatorLED = inputPin; 
-    wait(0.25);
   }
 }
