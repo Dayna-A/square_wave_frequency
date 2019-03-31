@@ -1,7 +1,7 @@
 #include <mbed.h>
 
-// Past a certain point (roughly 110 for my current test)
-// increasing the buffer size ceases to increase the average
+// Past a certain point increasing the buffer
+// size ceases to increase the average
 // by a significant value.
 #define BUF_SIZE 1000
 DigitalIn inputPin(PC_0);
