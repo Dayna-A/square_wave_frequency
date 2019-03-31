@@ -7,7 +7,7 @@ An introductory STM Microcontrollers experiment
 
 ## Solution Pseudocode
 
-```c++
+```
   Connect to input pin
   Create frequency buffer
   Connect to serial
