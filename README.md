@@ -5,7 +5,7 @@ An introductory STM Microcontrollers experiment
 [Dayna Anderson](dayna.anderson@csu.fullerton.edu)
 
 
-## Solution Pseudocode
+## Interrupts Solution Pseudocode
 
 ```
   Initialize input interrupt
